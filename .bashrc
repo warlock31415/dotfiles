@@ -15,5 +15,18 @@
             }
 export PS1="\[$(tput bold)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;208m\]\h\[$(tput sgr0)\]:\W\\$ \[$(tput sgr0)\]" 
 export EDITOR='vim'
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors -b)"
+alias ls='ls $LS_OPTIONS'
 alias tx='tmuxinator start narwhals'
-tx
+
+function del(){
+	if [[ ! -f '~/Trash' ]]
+	then
+		echo "Trash doesn't exist. Creating directory Trash"
+		mkdir ~/Trash
+	fi
+	
+	mv $1 ~/Trash
+
+	}
