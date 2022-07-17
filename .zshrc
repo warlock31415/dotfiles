@@ -70,7 +70,7 @@ ZSH_THEME="jonathan"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(zsh-autosuggestions git archlinux colored-man-pages fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,5 +99,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-export PATH=/home/pgk/.appimage:$PATH
+alias rr=ranger
+alias nv="nvim -u $HOME/.config/neovim/init.vim"
